@@ -17,8 +17,11 @@
     "swr": "^2.3.3"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.0.0",
+    "eslint": "^9.0.0",
     "eslint-config-next": "15.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
