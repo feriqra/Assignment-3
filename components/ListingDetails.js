@@ -14,12 +14,16 @@ export default function ListingDetails({ listing }) {
     <Container>
       <Row>
         <Col lg>
-          <Image
+          <img
+            onError={(event) => {
+              event.target.onerror = null;
+              event.target.src = "https://placehold.co/600x400?text=No+Image";
+            }}
+            className="img-fluid w-100"
             src={imageUrl}
             alt="Listing Image"
             width={500}
             height={300}
-            className="img-fluid w-100"
           />
           <br />
           <br />
