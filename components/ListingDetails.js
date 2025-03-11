@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Image from "next/image";
 
 export default function ListingDetails({ listing }) {
   if (!listing) return <p>⚠️ No listing data available.</p>;
@@ -13,14 +14,12 @@ export default function ListingDetails({ listing }) {
     <Container>
       <Row>
         <Col lg>
-          <img
-            onError={(event) => {
-              event.target.onerror = null;
-              event.target.src = "https://placehold.co/600x400?text=No+Image";
-            }}
-            className="img-fluid w-100"
+          <Image
             src={imageUrl}
             alt="Listing Image"
+            width={500}
+            height={300}
+            className="img-fluid w-100"
           />
           <br />
           <br />
